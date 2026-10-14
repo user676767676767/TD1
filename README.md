@@ -115,7 +115,7 @@ for caractere in sys.stdin.read():
     print(caractere)
 ```
 
-Pour déterminer si le programme python est lancé en mode interactif ou si l'entrée standard est redirigée, on peut utiliser la fonction `sys.stdin.isatty()` qui renvoie `true` si l'entrée standard correspond au clavier. 
+Pour déterminer si le programme python est lancé en mode interactif ou si l'entrée standard est redirigée, on peut utiliser la fonction `sys.stdin.isatty()` qui renvoie `true` si l'entrée standard correspond au> clavier. 
 
 Pour afficher un message sur la sortie d'erreur, deux solutions sont possibles : 
 -  Utiliser 📌 **l'argument nommé** `file=sys.stderr` de la fonction `print`, qui induira un passage à la ligne (sauf mention contraire avec l'argument nommé `end=""`). 

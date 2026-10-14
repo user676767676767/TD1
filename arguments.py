@@ -4,8 +4,17 @@
 - Ce programme doit afficher un message d'erreur et renvoyer le code d'erreur 1 si aucun argument n'est fourni.
 - Une fois le programme mis au point, poussez votre travail sur votre dépôt git et appelez l'enseignant avant de passer à l'exercice suivant."""
 
+import sys
+import os
+
+
 def arguments():
-    """Fonction qui affiche les arguments de la ligne de commande."""
+    if "DEBUG" in os.environ:
+        L = sys.argv
+        for i in range(len(L)):
+            print(f"{i}: {L[i]}")
+    else:
+        print(sys.argv)
     
 
 if __name__ == "__main__":
