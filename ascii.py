@@ -13,11 +13,22 @@
 - Une fois le programme mis au point, poussez votre travail sur votre dépôt git et appelez l'enseignant avant de passer à l'exercice suivant. 
 """
 
+import sys
+
+
 def lire():
     # récupération des arguments et sélection du flux
     # comptage
     # affichage
-    pass
+    ans = {}
+    flux = open(sys.stdin.read(), 'r')
+    for i in flux.read():
+        j = ord(i)
+        if j in ans.keys():
+            ans[j] += 1
+        else:
+            ans[j] = 1
+    print([(chr(i), ans[i]) for i in ans.keys()])
 
 
 if __name__ == "__main__":
