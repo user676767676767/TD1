@@ -8,14 +8,18 @@
 - Votre programme devra proposer un mode de débogage affichant les numéros des mots détectés. 
 - Une fois le programme mis au point, poussez votre travail sur votre dépôt git et appelez l'enseignant avant de passer à l'exercice suivant."""
 
+import sys
+
 
 def lire():
     # récupération des arguments et sélection du flux
     # parcours du flux
     # comptage
-    # affichage 
-    return ""
-
+    # affichage
+    flux = open(sys.stdin.read(), "r")
+    print(f"Il y a {len(flux.read())} caractères dans ce fichiers.")
+    flux.close()
+    return
 
     
     
